@@ -36,8 +36,6 @@ console.log(gen_inner.next());
 console.log(gen_inner.next());
 
 
-import add from './module.js'
-console.log(add(4,6));
 
 
 
