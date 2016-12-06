@@ -41,3 +41,5 @@ p.sayName();
 c.sayHi();
 
 console.log(c.constructor);
+
+
