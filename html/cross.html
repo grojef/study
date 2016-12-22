@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+        window.onload = function () {
+            window.addEventListener('message',function (event) {
+                    console.log(event);
+            },false);
+
+            document.getElementById('open').addEventListener('click',function () {
+                window.open('./b.html');
+            },false);
+        }
+    </script>
+    <iframe src="a.html" style="display: none;"></iframe>
+    <button id="open" name="open">open</button>
+</body>
+</html>

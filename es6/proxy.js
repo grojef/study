@@ -23,6 +23,10 @@ const handler = {
 
 const proxy = new Proxy(target, handler);
 proxy.age=19;
+proxy.name='xiao';
+console.log(proxy.name);
 
-console.log(target.age);
+
+
+
 

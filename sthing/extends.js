@@ -43,6 +43,17 @@ console.log('123'.padStart('0',7));
 
 
 /**
+ * 去除前后空白字符串
+ * @returns {string}
+ */
+String.prototype.trim =function () {
+    return this.replace('/^\s+','').replace('/\s+$','');
+}
+
+
+
+
+/**
  * 日期格式化
  * @param fmt
  * @returns {*}
