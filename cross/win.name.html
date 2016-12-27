@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window.name</title>
+</head>
+<body>
+<script>
+    var iframe = document.createElement('iframe');
+    var state = 0;
+    iframe.onload = function () {
+        if (state === 1) {
+            alert(iframe.contentWindow.name);
+        } else if (state === 0) {
+            state = 1;
+            iframe.src = 'about:blank';
+        }
+    };
+
+    iframe.src = 'http://www.ttyingqiu.com';
+
+    iframe.style='display:none';
+
+
+    document.body.appendChild(iframe);
+</script>
+</body>
+</html>

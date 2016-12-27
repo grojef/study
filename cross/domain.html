@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>domain</title>
+</head>
+<body>
+<script>
+
+    //domain降级
+    document.domain = 'tom.com';
+
+    var iframe = document.createElement('iframe');
+
+    iframe.src = 'www.yq.tom.com';
+
+    iframe.display = 'none';
+
+    document.body.appendChild(iframe);
+
+
+    iframe.onload = function () {
+        var doc = iframe.contentDocument || iframe.contentWindow.document;
+        //todo
+        iframe=null;
+    }
+</script>
+
+
+<script>
+
+    //iframe返回的页面也要降级
+    document.domain='tom.com';
+
+</script>
+
+
+
+</body>
+</html>
